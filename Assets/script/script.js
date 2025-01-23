@@ -511,7 +511,7 @@ function previousVideoTrack() {
     if (currentIndex > 0)
         prevIndex = currentIndex - 1;
     else if (currentIndex == 0)
-        prevIndex = videoUrls.length()-1;
+        prevIndex = videoUrls.length-1;
     playVideo(videoUrls[prevIndex])
 }
 // Register key being pressed
