@@ -843,3 +843,10 @@ videoPlayer.addEventListener('error', (event) => {
         console.error('Unable to load video. Please check your internet connection or try again later.', event.target.error);
     }
 });
+
+// Audio resync when changing from tabs to tabs
+document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) {
+        videoPlayer.currentTime = videoPlayer.currentTime;
+    }
+});
