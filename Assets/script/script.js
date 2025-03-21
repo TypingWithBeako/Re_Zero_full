@@ -846,7 +846,7 @@ videoPlayer.addEventListener('error', (event) => {
 
 // Audio resync when changing from tabs to tabs
 document.addEventListener("visibilitychange", () => {
-    if (!document.hidden) {
+    if (!document.hidden && !document.pictureInPictureElement) {
         videoPlayer.currentTime = videoPlayer.currentTime;
     }
 });
